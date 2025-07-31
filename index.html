@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+        min-height: 100vh;
+        border-radius: 24px;
+        /* Remove background here, handled by ::before */
+        position: relative;
+        z-index: 0;
+    }
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        border-radius: 24px;
+        background: linear-gradient(135deg, #ff0080, #7928ca, #007cf0, #00dfd8, #ff0080);
+        background-size: 200% 200%;
+        animation: rainbowBG 10s linear infinite;
+    }
+    @keyframes rainbowBG {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    main, header, footer {
+        border-radius: 24px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Exhibition Redev - Minecraft Utility Mod</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #23272a;
+            margin: 0;
+            color: #fff;
+        }
+        header {
+            background: #2c2f33;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .mod-logo {
+            width: 80px;
+            margin-bottom: 0.5rem;
+        }
+        nav {
+            margin-top: 1rem;
+        }
+        nav a {
+            color: #43b581;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: #2c2f33;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            padding: 2rem 2.5rem;
+        }
+        section {
+            margin-bottom: 2.5rem;
+        }
+        h1, h2, h3 {
+            color: #43b581;
+        }
+        ul {
+            margin: 1rem 0 1rem 2rem;
+        }
+        .download-btn {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 2rem;
+            background: linear-gradient(270deg, #7fff7f, #23855a, #43b581, #7fff7f);
+            background-size: 300% 300%;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.2s;
+            animation: downloadBtnMove 3s linear infinite;
+        }
+        @keyframes downloadBtnMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .download-btn:hover {
+            filter: brightness(1.1);
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #23272a;
+            color: #aaa;
+            font-size: 0.95rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 1rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- <img src="files/exhibition-redev-logo.png" alt="Exhibition Redev Logo" class="mod-logo"> -->
+        <h1>Exhibition Redev</h1>
+        <h2>Minecraft Utility Mod</h2>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#download">Download</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Exhibition Redev</h2>
+            <p>
+                <strong>Exhibition Redev</strong> is a powerful utility mod for Minecraft, designed to enhance your gameplay experience with advanced features, tools, and optimizations. Whether you're a casual player or a competitive gamer, Exhibition Redev provides a suite of utilities to help you get the most out of Minecraft.
+            </p>
+        </section>
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Customizable HUD overlays for better in-game information</li>
+                <li>Optifine included for Performance enhancements and FPS boosting options</li>
+                <li>Advanced keybinds and macros</li>
+                <li>Minimap and waypoint support</li>
+                <li>Auto tool selection and inventory management</li>
+                <li>Modular design – enable only the features you want</li>
+                <li>Compatible with 1.8.8 Minecraft</li>
+            </ul>
+        </section>
+        <section id="screenshots">
+            <h2>Screenshots</h2>
+            <p>
+                <!-- Replace with actual screenshots if available -->
+                <em>Screenshots coming soon!</em>
+            </p>
+        </section>
+        <section id="download">
+            <h2>Download</h2>
+            <p>
+                Get the latest version of Exhibition Redev below. Make sure to follow the installation instructions for a smooth setup.
+            </p>
+            <a href="files/Exhibition-Redev.zip" class="download-btn" download>Download Exhibition Redev ZIP</a>
+            <h3>Installation</h3>
+            <ol>
+                <li>Download the ZIP file above.</li>
+                <li>Extract the contents to your .Minecraft <code>versions</code> folder.</li>
+                <li>Add the profile and launch</li>
+            </ol>
+        </section>
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <h3>Is Exhibition Redev safe to use?</h3>
+            <p>Yes, Exhibition Redev is safe and does not contain any malicious code.</p>
+            <h3>Which Minecraft versions are supported?</h3>
+            <p>The mod is compatible with 1.8.8 Minecraft. Check the download section for specific version details.</p>
+            <h3>How do I report bugs or request features?</h3>
+            <p>You can contact the developer or open an issue on the project's GitHub page (link coming soon).</p>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 Exhibition Redev. Not affiliated with Mojang or Microsoft.
+    </footer>
+</body>
+</html>
